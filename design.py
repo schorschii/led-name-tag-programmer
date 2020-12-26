@@ -255,7 +255,8 @@ class MessageEditor(Qt.QWidget):
         uic.loadUi('message.ui', self)
         self.numberLbl.setText(str(number))
         self.animBox.addItems(ANIMS)
-        self.font = self.font()
+        self.font = Qt.QFont("Liberation Mono")
+        self.font.setPointSize(7)
         self.bitmap = None
 
     def on_bmpBox_toggled(self, on):
